@@ -1,0 +1,135 @@
+TASK 1
+name =input("Hello, what is your name")
+
+if name:
+    print("Hello", name, "nice to meet you")
+
+else:
+    print("Hello stranger")
+
+Task 2 
+
+password = input("Enter a new password")
+passwordcheck = input("Enter your new password again")
+
+if password == passwordcheck:
+    print ("Password set")
+else:
+    print("Passwords dont match")
+
+
+Task 3
+
+password = input("Enter a new password")
+passwordcheck = input("Enter your new password again")
+
+length1 = len(password)
+
+if length1 > 12 or length1 < 8 :
+    print("Password not in range")
+
+elif password == passwordcheck:
+    print("Password set")
+
+else:
+    print("Passwords do not match")
+    
+Task 4
+
+password = input("Enter a new password")
+passwordcheck = input("Enter your new password again")
+
+length1 = len(password)
+BAD_PASSWORDS = ['password', 'letmein', 'sesame', 'hello', 'justinbieber']
+
+if length1 > 12 or length1 < 8 :
+    print("Password not in range")
+
+elif password in BAD_PASSWORDS:
+  print("Password is bad")
+
+elif password == passwordcheck:
+    print("Password set")
+
+else:
+    print("Passwords do not match")
+
+Task 5 
+
+password = input("Enter a new password")
+passwordcheck = input("Enter your new password again")
+fail = True
+length1 = len(password)
+BAD_PASSWORDS = ['password', 'letmein', 'sesame', 'hello', 'justinbieber']
+while fail == True:
+  if length1 > 12 or length1 < 8:
+    print("Password not in range, please try again")
+    password = input("Enter a new password")
+    passwordcheck = input("Enter your new password again")
+
+  elif password in BAD_PASSWORDS:
+    print("Password is bad, please try again")
+    password = input("Enter a new password")
+    passwordcheck = input("Enter your new password again")
+
+  elif password == passwordcheck:
+    fail = False
+    print("Password set")
+
+  else:
+    print("Passwords do not match, please try again")
+    password = input("Enter a new password")
+    passwordcheck = input("Enter your new password again")
+
+
+
+
+
+Task 6 
+
+num = 7
+
+for i in range(0, 13):
+  print("%d * %d = %d" % (num, i, num * i))
+
+
+
+Task 7
+
+num = int(input('Display multiplication table of: '))
+valuerange = True
+while valuerange:
+if num < 1 or num > 12:
+ print("Number is not between 1 and 12")
+ num = int(input("What is your new value"))
+ valuerange = True
+
+else:
+ valuerange = False
+ for i in range(0, 13):
+  print("%d * %d = %d" % (num, i, num * i))
+
+
+Task 8 
+num = int(input('Display multiplication table of: '))
+valuerange = True
+while valuerange:
+if num > 12 or num < -12:
+ print("Number is not between 1 and 12")
+ num = int(input("What is your new value"))
+ valuerange = True
+
+
+else:
+ if num <0:
+  valuerange = False
+  for i in range(-12, 0, 1):
+   print("%d * %d = %d" % (num, i, num * i))
+
+
+
+ else:
+  valuerange = False
+  for i in range(0,13):
+   print("%d * %d = %d" % (num, i, num * i))
+
